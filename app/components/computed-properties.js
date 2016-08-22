@@ -7,7 +7,11 @@ export default Ember.Component.extend({
 
   cool: Ember.computed.and('react', 'angular'),
   awesome: Ember.computed.and('cool', 'ember'),
-  someValue: Ember.computed('awesome', function () {
+  yell: Ember.computed('awesome', function () {
     return this.get('awesome') ? 'Awesome!' : 'Cool.';
+  }),
+
+  onValueChange: Ember.observer('ember', 'react' , 'angular', function () {
+    console.log('Something has changed');
   })
 });

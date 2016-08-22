@@ -1,16 +1,14 @@
-{{yield}}
-
-<div class="radio-btn-group">
-  Select a framework:
+<div class="col-xs-4 radio-btn-group">
+  <strong>Select a framework:</strong>
   {{#each frameworks as |fw|}}
     <div>
-      {{#radio-button name="fw" value=fw}}
-        {{fw}}
+      {{#radio-button name="fw" value=fw groupValue=selectedFw}}
+        {{fw.name}}
       {{/radio-button}}
     </div>
   {{/each}}
 </div>
 
-<div class="fw-logo">
-  {{partial selectedFramework}}
+<div class="col-xs-6 fw-logo">
+  <img width="170" src={{selectedFw.logo}} {{action "update" on="click"}} />
 </div>
