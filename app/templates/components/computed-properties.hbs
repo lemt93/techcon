@@ -6,24 +6,23 @@ Do you know all of these frameworks ?
 </div>
 
 <div>
-  {{input type="checkbox" name=react checked=react}}
+  {{input type="checkbox" name=react checked=react disabled="true"}}
   <span>React</span>
 </div>
 
 <div>
-  {{input type="checkbox" name=angular checked=angular}}
+  {{input type="checkbox" name=angular checked=angular disabled="true"}}
   <span>Angular 2.0</span>
 </div>
 
 <h3>
-  You're
   <strong>
     {{#if cool}}
       {{#if awesome}}
-        awesome
+        {{someValue}}
       {{/if}}
       {{#unless awesome}}
-        cool
+        {{someValue}}
       {{/unless}}
     {{/if}}
   </strong>
