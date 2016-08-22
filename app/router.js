@@ -9,9 +9,9 @@ Router.map(function() {
   this.route('main-route', function () {
     this.route('nested-route');
   });
+  this.route('store', { path: 'store-example' });
   this.route('data-binding');
   this.route('components');
-  this.route('store');
   this.route('computed-properties');
 });
 
