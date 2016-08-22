@@ -1,0 +1,30 @@
+Do you know all of these frameworks ?
+
+<div>
+  {{input type="checkbox" name=ember checked=ember}}
+  <span>Ember.js</span>
+</div>
+
+<div>
+  {{input type="checkbox" name=react checked=react}}
+  <span>React</span>
+</div>
+
+<div>
+  {{input type="checkbox" name=angular checked=angular}}
+  <span>Angular 2.0</span>
+</div>
+
+<h3>
+  You're
+  <strong>
+    {{#if cool}}
+      {{#if awesome}}
+        awesome
+      {{/if}}
+      {{#unless awesome}}
+        cool
+      {{/unless}}
+    {{/if}}
+  </strong>
+</h3>
